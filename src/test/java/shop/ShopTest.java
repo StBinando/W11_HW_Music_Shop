@@ -74,4 +74,15 @@ public class ShopTest {
         shop.removeItem(guitar);
         assertEquals(0, shop.getStock().size());
     }
+
+    @Test
+    public void shopCanCalculateTotalPotentialProfit(){
+        shop.addItem(guitar);
+        shop.addItem(sax);
+        shop.addItem(sheet);
+        shop.addItem(string);
+        assertEquals(4, shop.getStock().size());
+        assertEquals(197, shop.calcTotPotentialProfit(),0);
+        System.out.println("tot prof: " + shop.calcTotPotentialProfit());
+    }
 }
