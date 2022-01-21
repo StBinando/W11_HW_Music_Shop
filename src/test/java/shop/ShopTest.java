@@ -32,7 +32,7 @@ public class ShopTest {
         sheet = new MusicSheet(
                 ShopSection.ACCESSORIES,
                 Genre.BLUES,
-                "Famous blues song",
+                "Shake a Tail Feather",
                 10,
                 15);
         sax = new Saxophone(
@@ -44,7 +44,7 @@ public class ShopTest {
                 240);
         string = new GuitarString(
                 ShopSection.ACCESSORIES,
-                "Guitar string",
+                "D'Addario",
                 Material.METAL,
                 Note.B_2ND,
                 5.00,
@@ -84,5 +84,14 @@ public class ShopTest {
         assertEquals(4, shop.getStock().size());
         assertEquals(197, shop.calcTotPotentialProfit(),0);
         System.out.println("tot prof: " + shop.calcTotPotentialProfit());
+    }
+
+    @Test
+    public void shopCanPrintStockWithPrices(){
+        shop.addItem(guitar);
+        shop.addItem(sax);
+        shop.addItem(sheet);
+        shop.addItem(string);
+        shop.printStockWithPrices();
     }
 }

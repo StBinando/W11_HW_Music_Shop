@@ -24,4 +24,18 @@ public class Saxophone extends Instrument{
     public String play(String text) {
         return "Plays "+getSaxType()+" sax sounds: " + text;
     }
+
+    @Override
+    public void printData() {
+        System.out.println(
+                "Product: "+ this.getClass().getSimpleName() +
+                        " - Section: "+ this.getSection()
+        );
+        System.out.println(
+                this.getDescription() +
+                        (" - Sax "+this.getSaxType()).toLowerCase() +
+                        " - Price: " + this.getSellingPrice()
+        );
+        System.out.println("----------------------------------");
+    }
 }

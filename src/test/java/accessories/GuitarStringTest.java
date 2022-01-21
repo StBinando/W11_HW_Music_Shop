@@ -54,4 +54,9 @@ public class GuitarStringTest {
     public void hasMarkup(){
         assertEquals(2, string.getMarkup(), 0);
     }
+
+    @Test
+    public void canPrintData(){
+        string.printData();
+    }
 }

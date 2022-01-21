@@ -9,6 +9,7 @@ public class Shop {
     private String name;
     private ArrayList<ISell> stock = new ArrayList<>();
     private double totPotentialProfit;
+    private String outputString;
 
     public Shop(String name, ArrayList<ISell> stock) {
         this.name = name;
@@ -37,5 +38,12 @@ public class Shop {
             totPotentialProfit += i.getMarkup();
         }
         return totPotentialProfit;
+    }
+
+    public void printStockWithPrices(){
+        this.outputString = ""; //initializes variable outputString as empty
+        for (ISell i: this.stock){
+            i.printData();
+        }
     }
 }

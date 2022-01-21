@@ -18,4 +18,18 @@ public class MusicSheet extends Item {
     public Genre getGenre() {
         return genre;
     }
+
+    @Override
+    public void printData() {
+        System.out.println(
+                "Product: "+ this.getClass().getSimpleName() +
+                        " - Section: "+ this.getSection()
+        );
+        System.out.println(
+                this.getDescription() +
+                        " - " + this.getGenre() +
+                        " - Price: " + this.getSellingPrice()
+        );
+        System.out.println("----------------------------------");
+    }
 }

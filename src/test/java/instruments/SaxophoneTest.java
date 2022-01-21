@@ -60,6 +60,11 @@ public class SaxophoneTest {
     @Test
     public void canPlay(){
         System.out.println(sax.play("Young Americans"));
-//        assertEquals("Plays TENOR sax sounds: Young Americans", sax.play("Smoke on the water"));
+        assertEquals("Plays TENOR sax sounds: Young Americans", sax.play("Smoke on the water"));
+    }
+
+    @Test
+    public void canPrintData(){
+        sax.printData();
     }
 }

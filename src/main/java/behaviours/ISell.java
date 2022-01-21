@@ -9,4 +9,5 @@ public interface ISell {
     public double getSellingPrice();
     public double getMarkup();
     public void sell();
+    public void printData();
 }

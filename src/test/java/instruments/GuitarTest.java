@@ -67,4 +67,9 @@ public class GuitarTest {
         System.out.println(guitar.play("Smoke on the water"));
         assertEquals("Plays ELECTRIC guitar sound: Smoke on the water", guitar.play("Smoke on the water"));
     }
+
+    @Test
+    public void canPrintData(){
+        guitar.printData();
+    }
 }

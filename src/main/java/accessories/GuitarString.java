@@ -25,4 +25,19 @@ public class GuitarString extends Item {
     public Note getNote() {
         return note;
     }
+
+    @Override
+    public void printData() {
+        System.out.println(
+                "Product: "+ this.getClass().getSimpleName() +
+                        " - Section: "+ this.getSection()
+        );
+        System.out.println(
+                this.getDescription() +
+                        " - " +this.getNote() +
+                        " - " + this.getMaterial() +
+                        " - Price: " + this.getSellingPrice()
+        );
+        System.out.println("----------------------------------");
+    }
 }

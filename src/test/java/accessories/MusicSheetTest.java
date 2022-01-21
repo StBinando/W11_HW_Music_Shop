@@ -49,4 +49,9 @@ public class MusicSheetTest {
     public void hasMarkup(){
         assertEquals(5, sheet.getMarkup(), 0);
     }
+
+    @Test
+    public void canPrintData(){
+        sheet.printData();
+    }
 }

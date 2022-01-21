@@ -2,6 +2,8 @@ package instruments;
 
 import shop.ShopSection;
 
+import java.util.Locale;
+
 public class Guitar extends Instrument{
     private GuitarType guitarType;
     private int strings;
@@ -29,5 +31,20 @@ public class Guitar extends Instrument{
     @Override
     public String play(String text) {
         return "Plays "+getGuitarType()+" guitar sound: " + text;
+    }
+
+    @Override
+    public void printData() {
+        System.out.println(
+                "Product: "+ this.getClass().getSimpleName() +
+                " - Section: "+ this.getSection()
+        );
+        System.out.println(
+                this.getDescription() +
+                        " - " +this.getGuitarType() +
+                        " - " + this.getStrings() + " strings"+
+                        " - Price: " + this.getSellingPrice()
+        );
+        System.out.println("----------------------------------");
     }
 }
